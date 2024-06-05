@@ -1,7 +1,7 @@
 # this little batch file will autostart conky
 # and copy the configuration file to the standard place
 # where conky looks for a configuration file
-# Lua syntax!!
+# Tested on Fedora 40, use at your own risk
 
 
 # killing whatever conkies are still working
