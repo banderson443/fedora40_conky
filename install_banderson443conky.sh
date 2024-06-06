@@ -3,20 +3,14 @@
 # where conky looks for a configuration file
 # Tested on Fedora 40, use at your own risk
 
-
 # killing whatever conkies are still working
 echo "################################################################"
 echo "Stopping conky's if available"
 
-
 killall conky 2>/dev/null
 sleep 1
 
-##################################################################################################################
-###################### C H E C K I N G   E X I S T E N C E   O F   F O L D E R S            ######################
-##################################################################################################################
-
-
+### C H E C K I N G   E X I S T E N C E   O F   F O L D E R S            ###
 
 # if there is no hidden folder autostart then make one
 [ -d $HOME"/.config/autostart" ] || mkdir -p $HOME"/.config/autostart"
@@ -27,9 +21,7 @@ sleep 1
 # if there is no hidden folder fonts then make one
 [ -d $HOME"/.fonts" ] || mkdir -p $HOME"/.fonts"
 
-##################################################################################################################
-######################              C L E A N I N G  U P  O L D  F I L E S                    ####################
-##################################################################################################################
+###            C L E A N I N G  U P  O L D  F I L E S                    ###
 
 # removing all the old files that may be in ./config/conky with confirm deletion
 
@@ -62,12 +54,7 @@ echo "Making sure conky autostarts next boot."
 # making sure conky is started at boot
 cp conky.desktop ~/.config/autostart/start-conky.desktop
 
-
-##################################################################################################################
-########################                           F O N T S                            ##########################
-##################################################################################################################
-
-
+###                         F O N T S                            ###
 
 echo "################################################################" 
 echo "Installing the fonts if you do not have it yet - with choice"
@@ -110,9 +97,7 @@ else
 fi
 
 
-##################################################################################################################
-########################                    S T A R T  O F  C O N K Y                   ##########################
-##################################################################################################################
+###                    S T A R T  O F  C O N K Y                   ###
 
 echo "################################################################"
 echo "Starting the conky"
